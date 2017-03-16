@@ -21,6 +21,8 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>TomcatServer</server>
+                    <username>admin</username>
+                    <password>password</password>
                     <path>/</path>
                 </configuration>
             </plugin>
@@ -82,9 +84,15 @@
         </dependency>
 
         <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>jstl</artifactId>
-        <version>1.2</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.1</version>
         </dependency>
 
     </dependencies>

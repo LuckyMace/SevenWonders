@@ -1,5 +1,7 @@
 package com.seven.wonders.pojo;
 
+import java.util.List;
+
 /**
  * Created by user on 25.02.2017.
  */
@@ -12,6 +14,16 @@ public class Game {
     private int number;
 
     private GameStatus status;
+
+    private List<Player> players;
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(List<Player> players) {
+        this.players = players;
+    }
 
     public Long getId() {
         return id;

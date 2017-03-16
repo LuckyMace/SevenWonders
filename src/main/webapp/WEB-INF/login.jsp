@@ -11,19 +11,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>7 Wonders</title>
 </head>
 <body>
-<%--<span>${message}</span>--%>
 
-<table>
-<c:forEach items="${currentGames}" var="currentGame">
-<tr>
-<td>${currentGame.name}</td>
-<td>${currentGame.number}</td>
-<td>${currentGame.status}</td>
-</tr>
-</c:forEach>
+<table border=1 cellpadding=5>
+  <tr>
+    <th>Name</th>
+    <th>Number of players</th>
+    <th>Status</th>
+  </tr>
+  <c:forEach items="${allGames}" var="game">
+    <tr>
+      <td>${game.name}</td>
+      <td>${game.number}</td>
+      <td>${game.status}</td>
+    </tr>
+  </c:forEach>
 </table>
 <form:form method="post" action="newgame">
   Название игры: <input type="text" name="game_name">

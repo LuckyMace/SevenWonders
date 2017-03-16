@@ -1,76 +1,55 @@
 package com.seven.wonders.controller;
 
+import com.seven.wonders.core.Application;
+import com.seven.wonders.core.Session;
 import com.seven.wonders.pojo.Game;
 import com.seven.wonders.pojo.GameStatus;
+import com.seven.wonders.pojo.Player;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by user on 04.02.2017.
  */
-@Controller
+
+@Scope(scopeName = "prototype")
+@Controller("/login")
 public class LoginController {
 
     private String port;
 
-    private static Map<String, Game> currentGames = new HashMap<>();
+    @Autowired
+    private Application application;
 
-    private String newGameName;
+    @Autowired
+    private Session session;
 
-    private String newPlayerName;
-
-
-
-    @RequestMapping(value = "/newgame", method = RequestMethod.GET)
+    @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
     public String newGame(Model model) {
-        newGameName = model.asMap().get("game_name").toString();
-        newPlayerName = model.asMap().get("player_name").toString();
+        session.getCurrentPlayer().setAdmin(true);
+        session.getCurrentPlayer().setName((String) model.asMap().get("player_name"));
+        String newGameName = (String) model.asMap().get("game_name");
         Game newGame = new Game();
         newGame.setName(newGameName);
         newGame.setNumber(1);
         newGame.setStatus(GameStatus.NEW);
-        currentGames.put("1", newGame);
-        return "login";
+        application.getAllGames().put((application.getAllGames().size() + 1) + "", newGame);
+        newGame.getPlayers().add(session.getCurrentPlayer());
+        return "newgame";
     }
 
     public String enterGame() {
         return "";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = {RequestMethod.GET,RequestMethod.POST})
     public String login(Model model){
-        model.addAttribute("currentGames", currentGames);
+        model.addAttribute("allGames", application.getAllGames().values());
         return "login";
-    }
-
-    public Map<String, Game> getCurrentGames() {
-        return currentGames;
-    }
-
-    public void setCurrentGames(Map<String, Game> currentGames) {
-        this.currentGames = currentGames;
-    }
-
-    public String getNewGameName() {
-        return newGameName;
-    }
-
-    public void setNewGameName(String newGameName) {
-        this.newGameName = newGameName;
-    }
-
-    public String getNewPlayerName() {
-        return newPlayerName;
-    }
-
-    public void setNewPlayerName(String newPlayerName) {
-        this.newPlayerName = newPlayerName;
     }
 
     public String getPort() {
