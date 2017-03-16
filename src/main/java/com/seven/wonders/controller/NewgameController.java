@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 @Scope(scopeName = "prototype")
-@Controller("/newgame")
+@Controller
 public class NewgameController {
 
     @Autowired
@@ -23,10 +23,10 @@ public class NewgameController {
     @Autowired
     private Session session;
 
-    @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
-    public String newgame(Model model){
-        model.addAttribute("players", session.getCurrentGame().getPlayers());
-        return "newgame";
-    }
+//    @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
+//    public String newgame(Model model){
+//        model.addAttribute("players", session.getCurrentGame().getPlayers());
+//        return "newgame";
+//    }
 
 }

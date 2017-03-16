@@ -12,12 +12,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.*;
+
 /**
  * Created by user on 04.02.2017.
  */
 
 @Scope(scopeName = "prototype")
-@Controller("/login")
+@Controller
 public class LoginController {
 
     private String port;
@@ -30,6 +32,7 @@ public class LoginController {
 
     @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
     public String newGame(Model model) {
+        session.setCurrentPlayer(new Player());
         session.getCurrentPlayer().setAdmin(true);
         session.getCurrentPlayer().setName((String) model.asMap().get("player_name"));
         String newGameName = (String) model.asMap().get("game_name");
@@ -37,6 +40,7 @@ public class LoginController {
         newGame.setName(newGameName);
         newGame.setNumber(1);
         newGame.setStatus(GameStatus.NEW);
+        newGame.setPlayers(new ArrayList<Player>());
         application.getAllGames().put((application.getAllGames().size() + 1) + "", newGame);
         newGame.getPlayers().add(session.getCurrentPlayer());
         return "newgame";

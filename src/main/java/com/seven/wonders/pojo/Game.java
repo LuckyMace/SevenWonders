@@ -1,5 +1,7 @@
 package com.seven.wonders.pojo;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,13 +17,13 @@ public class Game {
 
     private GameStatus status;
 
-    private List<Player> players;
+    private ArrayList<Player> players;
 
-    public List<Player> getPlayers() {
+    public ArrayList<Player> getPlayers() {
         return players;
     }
 
-    public void setPlayers(List<Player> players) {
+    public void setPlayers(ArrayList<Player> players) {
         this.players = players;
     }
 
