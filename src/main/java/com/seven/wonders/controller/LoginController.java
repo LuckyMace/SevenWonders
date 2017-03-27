@@ -30,7 +30,7 @@ public class LoginController {
     @Autowired
     private Session session;
 
-    @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
+    @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET,RequestMethod.POST})
     public String newGame(Model model) {
         session.setCurrentPlayer(new Player());
         session.getCurrentPlayer().setAdmin(true);
@@ -43,7 +43,8 @@ public class LoginController {
         newGame.setPlayers(new ArrayList<Player>());
         application.getAllGames().put((application.getAllGames().size() + 1) + "", newGame);
         newGame.getPlayers().add(session.getCurrentPlayer());
-        return "newgame";
+        session.setCurrentGame(newGame);
+        return "redirect:newgame";
     }
 
     public String enterGame() {

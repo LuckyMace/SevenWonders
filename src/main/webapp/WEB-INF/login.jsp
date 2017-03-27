@@ -29,7 +29,7 @@
     </tr>
   </c:forEach>
 </table>
-<form:form method="post" action="newgame">
+<form:form method="post" action="newgame/create">
   Название игры: <input type="text" name="game_name">
   <br/>
   Имя игрока: <input type="text" name="player_name">

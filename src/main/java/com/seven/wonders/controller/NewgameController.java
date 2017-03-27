@@ -23,10 +23,16 @@ public class NewgameController {
     @Autowired
     private Session session;
 
-//    @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
-//    public String newgame(Model model){
-//        model.addAttribute("players", session.getCurrentGame().getPlayers());
-//        return "newgame";
-//    }
+    @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
+    public String newgame(Model model){
+        model.addAttribute("players", session.getCurrentGame().getPlayers());
+        return "newgame";
+    }
+
+    @RequestMapping(value = "/newgame/leave", method = {RequestMethod.GET,RequestMethod.POST})
+    public String login(Model model){
+        model.addAttribute("allGames", application.getAllGames().values());
+        return "redirect:login";
+    }
 
 }
