@@ -1,8 +1,6 @@
 package com.seven.wonders.pojo;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by user on 25.02.2017.
@@ -55,7 +53,7 @@ public class Game {
         return name;
     }
 
-    public void setName(String newGameName) {
+    public void setName(String name) {
         this.name = name;
     }
 }

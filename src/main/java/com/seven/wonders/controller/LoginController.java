@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
 
@@ -31,20 +32,28 @@ public class LoginController {
     private Session session;
 
     @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET,RequestMethod.POST})
-    public String newGame(Model model) {
-        session.setCurrentPlayer(new Player());
-        session.getCurrentPlayer().setAdmin(true);
-        session.getCurrentPlayer().setName((String) model.asMap().get("player_name"));
-        String newGameName = (String) model.asMap().get("game_name");
+    public String newGame(@RequestParam("game_name") String gameName,
+                          @RequestParam("player_name") String playerName) {
+        Player player = new Player();
+        player.setName(playerName);
+        player.setAdmin(true);
+        session.setCurrentPlayer(player);
+
         Game newGame = new Game();
-        newGame.setName(newGameName);
+        newGame.setName(gameName);
         newGame.setNumber(1);
         newGame.setStatus(GameStatus.NEW);
-        newGame.setPlayers(new ArrayList<Player>());
+
+        ArrayList<Player> players = newGame.getPlayers();
+        if (players == null) {
+            players = new ArrayList<>();
+        }
+        players.add(player);
+        newGame.setPlayers(players);
+
         application.getAllGames().put((application.getAllGames().size() + 1) + "", newGame);
-        newGame.getPlayers().add(session.getCurrentPlayer());
         session.setCurrentGame(newGame);
-        return "redirect:newgame";
+        return "redirect:/newgame";
     }
 
     public String enterGame() {
