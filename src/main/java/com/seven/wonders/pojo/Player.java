@@ -38,7 +38,7 @@ public class Player {
         this.name = name;
     }
 
-    public Boolean getAdmin() {
+    public Boolean getIsAdmin() {
         return isAdmin;
     }
 
