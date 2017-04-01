@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Game {
 
+    // FIELDS
     private Long id;
 
     private String name;
@@ -17,14 +18,9 @@ public class Game {
 
     private ArrayList<Player> players;
 
-    public ArrayList<Player> getPlayers() {
-        return players;
-    }
+    // CONSTRUCTORS
 
-    public void setPlayers(ArrayList<Player> players) {
-        this.players = players;
-    }
-
+    // GETTERS AND SETTERS
     public Long getId() {
         return id;
     }
@@ -33,12 +29,12 @@ public class Game {
         this.id = id;
     }
 
-    public GameStatus getStatus() {
-        return status;
+    public String getName() {
+        return name;
     }
 
-    public void setStatus(GameStatus status) {
-        this.status = status;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getNumber() {
@@ -49,11 +45,19 @@ public class Game {
         this.number = number;
     }
 
-    public String getName() {
-        return name;
+    public GameStatus getStatus() {
+        return status;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStatus(GameStatus status) {
+        this.status = status;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(ArrayList<Player> players) {
+        this.players = players;
     }
 }

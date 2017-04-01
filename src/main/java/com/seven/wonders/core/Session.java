@@ -13,9 +13,17 @@ import org.springframework.stereotype.Component;
 @Scope(value = "session",  proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Component
 public class Session {
-    private Game currentGame;
+    private String currentGameId;
 
     private Player currentPlayer;
+
+    public String getCurrentGameId() {
+        return currentGameId;
+    }
+
+    public void setCurrentGameId(String currentGameId) {
+        this.currentGameId = currentGameId;
+    }
 
     public Player getCurrentPlayer() {
         return currentPlayer;
@@ -23,13 +31,5 @@ public class Session {
 
     public void setCurrentPlayer(Player currentPlayer) {
         this.currentPlayer = currentPlayer;
-    }
-
-    public Game getCurrentGame() {
-        return currentGame;
-    }
-
-    public void setCurrentGame(Game currentGame) {
-        this.currentGame = currentGame;
     }
 }

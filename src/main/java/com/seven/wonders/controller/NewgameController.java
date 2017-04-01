@@ -25,7 +25,7 @@ public class NewgameController {
 
     @RequestMapping(value = "/newgame", method = {RequestMethod.GET,RequestMethod.POST})
     public String newgame(Model model){
-        model.addAttribute("players", session.getCurrentGame().getPlayers());
+        model.addAttribute("players", application.getAllGames().get(session.getCurrentGameId()).getPlayers());
         return "newgame";
     }
 

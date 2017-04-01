@@ -52,7 +52,7 @@ public class LoginController {
         newGame.setPlayers(players);
 
         application.getAllGames().put((application.getAllGames().size() + 1) + "", newGame);
-        session.setCurrentGame(newGame);
+        session.setCurrentGameId(application.getAllGames().size() + "");
         return "redirect:/newgame";
     }
 
