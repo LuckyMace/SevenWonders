@@ -1,9 +1,9 @@
 <%--
   Created by IntelliJ IDEA.
-  User: user
+  User: Pavel Ruban
   Date: 02.04.2017
   Time: 20:28
-  To change this template use File | Settings | File Templates.
+  Game Form
 --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>

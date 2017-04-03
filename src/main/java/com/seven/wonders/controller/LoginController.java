@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.*;
 
 /**
- * Created by user on 04.02.2017.
+ * Created by Pavel Ruban on 04.02.2017.
+ * Contoller for Login From
  */
 
 @Scope(scopeName = "prototype")

@@ -7,7 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by user on 15.03.2017.
+ * Created by Pavel Ruban on 15.03.2017.
+ * Controller for Application
  */
 
 @Component

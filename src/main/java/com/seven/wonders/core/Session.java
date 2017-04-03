@@ -6,7 +6,8 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by user on 15.03.2017.
+ * Created by Pavel Ruban on 15.03.2017.
+ * Controller for Session
  */
 
 @Scope(value = "session",  proxyMode = ScopedProxyMode.TARGET_CLASS)

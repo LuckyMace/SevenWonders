@@ -1,7 +1,8 @@
 package com.seven.wonders.pojo.entity;
 
 /**
- * Created by user on 25.02.2017.
+ * Created by Pavel Ruban on 25.02.2017.
+ * Entity for Player
  */
 public class Player {
 

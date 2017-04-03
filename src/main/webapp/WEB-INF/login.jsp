@@ -1,9 +1,9 @@
 <%--
   Created by IntelliJ IDEA.
-  User: user
+  User: Pavel Ruban
   Date: 04.02.2017
   Time: 20:45
-  To change this template use File | Settings | File Templates.
+  Login Form
 --%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>

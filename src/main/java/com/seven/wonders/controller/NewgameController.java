@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Created by user on 15.03.2017.
+ * Created by Pavel Ruban on 15.03.2017.
+ * Controller for New Game Form
  */
 
 @Scope(scopeName = "prototype")

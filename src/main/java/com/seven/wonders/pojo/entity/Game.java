@@ -5,7 +5,8 @@ import com.seven.wonders.pojo.enumer.GameStatus;
 import java.util.ArrayList;
 
 /**
- * Created by user on 25.02.2017.
+ * Created by Pavel Ruban on 25.02.2017.
+ * Entity for Game
  */
 public class Game {
 

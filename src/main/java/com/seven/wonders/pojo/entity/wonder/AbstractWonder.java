@@ -1,7 +1,8 @@
-package com.seven.wonders.pojo.entity;
+package com.seven.wonders.pojo.entity.wonder;
 
 /**
- * Created by user on 02.04.2017.
+ * Created by Pavel Ruban on 02.04.2017.
+ * Abstract entity for Wonder
  */
 public abstract class AbstractWonder {
 
