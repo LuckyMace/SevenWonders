@@ -2,9 +2,9 @@ package com.seven.wonders.controller;
 
 import com.seven.wonders.core.Application;
 import com.seven.wonders.core.Session;
-import com.seven.wonders.pojo.Game;
-import com.seven.wonders.pojo.GameStatus;
-import com.seven.wonders.pojo.Player;
+import com.seven.wonders.pojo.entity.Game;
+import com.seven.wonders.pojo.enumer.GameStatus;
+import com.seven.wonders.pojo.entity.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;

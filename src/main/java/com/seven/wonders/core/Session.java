@@ -1,7 +1,6 @@
 package com.seven.wonders.core;
 
-import com.seven.wonders.pojo.Game;
-import com.seven.wonders.pojo.Player;
+import com.seven.wonders.pojo.entity.Player;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,6 @@
-package com.seven.wonders.pojo;
+package com.seven.wonders.pojo.entity;
+
+import com.seven.wonders.pojo.enumer.GameStatus;
 
 import java.util.ArrayList;
 

@@ -1,9 +1,9 @@
-package com.seven.wonders.pojo;
+package com.seven.wonders.pojo.entity;
 
 /**
- * Created by user on 01.04.2017.
+ * Created by user on 02.04.2017.
  */
-public abstract class AbstractCard {
+public abstract class AbstractWonder {
 
     // FIELDS
     private Long id;

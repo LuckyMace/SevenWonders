@@ -1,6 +1,6 @@
 package com.seven.wonders.core;
 
-import com.seven.wonders.pojo.Game;
+import com.seven.wonders.pojo.entity.Game;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

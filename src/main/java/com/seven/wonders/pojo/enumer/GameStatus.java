@@ -1,4 +1,4 @@
-package com.seven.wonders.pojo;
+package com.seven.wonders.pojo.enumer;
 
 /**
  * Created by user on 25.02.2017.
