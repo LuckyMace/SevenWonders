@@ -17,13 +17,15 @@
 
 <table border=1 cellpadding=5>
   <tr>
-    <th>Name</th>
-    <th>Number of players</th>
-    <th>Status</th>
+    <th>Название</th>
+    <th>Создатель</th>
+    <th>Количество игроков</th>
+    <th>Статус</th>
   </tr>
   <c:forEach items="${allGames}" var="game">
     <tr>
       <td>${game.name}</td>
+      <td>${game.players.get(0).name}</td>
       <td>${game.number}</td>
       <td>${game.status}</td>
     </tr>
