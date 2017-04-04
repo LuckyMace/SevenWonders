@@ -1,7 +1,7 @@
 # SevenWonders
 Version: 1.0
 
-Technologies: JDK 1.8, Spring Framework, Maven, Git;
+Technologies: Java (JDK 1.8), Spring Framework, Maven, Git;
 
 Web server: Tomcat 7.0.75;
 
