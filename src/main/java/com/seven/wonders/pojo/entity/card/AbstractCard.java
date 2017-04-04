@@ -1,5 +1,9 @@
 package com.seven.wonders.pojo.entity.card;
 
+import com.seven.wonders.pojo.entity.Resource;
+
+import java.util.List;
+
 /**
  * Created by Pavel Ruban on 01.04.2017.
  * Abstract entity for Card
@@ -11,9 +15,17 @@ public abstract class AbstractCard {
 
     private String name;
 
-    private String imagePath;
+    private List<Resource> cost;
 
     private int playersNumber;
+
+    private int epoch;
+
+    private String imagePath;
+
+    private List<AbstractCard> freeCards;
+
+    private List<AbstractCard> parentCards;
 
     //CONSTRUCTORS
 
@@ -34,6 +46,24 @@ public abstract class AbstractCard {
         this.name = name;
     }
 
+
+
+    public int getPlayersNumber() {
+        return playersNumber;
+    }
+
+    public void setPlayersNumber(int playersNumber) {
+        this.playersNumber = playersNumber;
+    }
+
+    public int getEpoch() {
+        return epoch;
+    }
+
+    public void setEpoch(int epoch) {
+        this.epoch = epoch;
+    }
+
     public String getImagePath() {
         return imagePath;
     }
@@ -42,11 +72,19 @@ public abstract class AbstractCard {
         this.imagePath = imagePath;
     }
 
-    public int getPlayersNumber() {
-        return playersNumber;
+    public List<AbstractCard> getFreeCards() {
+        return freeCards;
     }
 
-    public void setPlayersNumber(int playersNumber) {
-        this.playersNumber = playersNumber;
+    public void setFreeCards(List<AbstractCard> freeCards) {
+        this.freeCards = freeCards;
+    }
+
+    public List<AbstractCard> getParentCards() {
+        return parentCards;
+    }
+
+    public void setParentCards(List<AbstractCard> parentCards) {
+        this.parentCards = parentCards;
     }
 }
