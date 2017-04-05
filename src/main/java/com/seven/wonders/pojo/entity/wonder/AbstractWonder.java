@@ -11,6 +11,8 @@ public abstract class AbstractWonder {
 
     private String name;
 
+    private String imagePath;
+
     //CONSTRUCTORS
 
     //GETTERS AND SETTERS
@@ -28,5 +30,13 @@ public abstract class AbstractWonder {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

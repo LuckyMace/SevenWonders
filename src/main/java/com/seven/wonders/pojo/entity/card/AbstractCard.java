@@ -46,7 +46,13 @@ public abstract class AbstractCard {
         this.name = name;
     }
 
+    public List<Resource> getCost() {
+        return cost;
+    }
 
+    public void setCost(List<Resource> cost) {
+        this.cost = cost;
+    }
 
     public int getPlayersNumber() {
         return playersNumber;
