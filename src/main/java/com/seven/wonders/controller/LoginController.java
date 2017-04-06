@@ -32,7 +32,7 @@ public class LoginController {
     @Autowired
     private Session session;
 
-    @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET,RequestMethod.POST})
+    @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET, RequestMethod.POST}, params = "create")
     public String newGame(@RequestParam("game_name") String gameName,
                           @RequestParam("player_name") String playerName) {
         Player player = new Player();
@@ -43,6 +43,7 @@ public class LoginController {
         Game newGame = new Game();
         newGame.setName(gameName);
         newGame.setNumber(1);
+        newGame.setId(application.getAllGames().size() + 1L);
         newGame.setStatus(GameStatus.NEW);
 
         ArrayList<Player> players = newGame.getPlayers();
@@ -57,12 +58,26 @@ public class LoginController {
         return "redirect:/newgame";
     }
 
-    public String enterGame() {
-        return "";
+    @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET, RequestMethod.POST}, params = "enter")
+    public String enterGame(@RequestParam("player_name") String playerName) {
+        Player player = new Player();
+        player.setName(playerName);
+        player.setAdmin(false);
+        session.setCurrentPlayer(player);
+
+        //TODO: implement entering selected game (by gameId)
+        Game currentGame = application.getAllGames().get("1");
+
+        ArrayList<Player> players = currentGame.getPlayers();
+        players.add(player);
+        currentGame.setNumber(players.size());
+
+        session.setCurrentGameId(currentGame.getId() + "");
+        return "redirect:/newgame";
     }
 
-    @RequestMapping(value = "/login", method = {RequestMethod.GET,RequestMethod.POST})
-    public String login(Model model){
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
+    public String login(Model model) {
         model.addAttribute("allGames", application.getAllGames().values());
         return "login";
     }

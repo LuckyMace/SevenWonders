@@ -36,9 +36,8 @@
   <br/>
   Имя игрока: <input type="text" name="player_name">
   <br/>
-  <input type="submit" value="Создать игру" />
-  <input type="submit" value="Войти в игру" />
-  <input type="submit" value="Выход" />
+  <input type="submit" name="create" value="Создать игру" />
+  <input type="submit" name="enter" value="Войти в игру" />
 </form:form>
 
 </body>
