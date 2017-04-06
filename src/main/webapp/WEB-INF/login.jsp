@@ -8,9 +8,10 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="utf-8" contentType="text/html;charset=utf-8"%>
 <html>
 <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>7 Wonders</title>
 </head>
 <body>
@@ -31,6 +32,7 @@
     </tr>
   </c:forEach>
 </table>
+<br/>
 <form:form method="post" action="newgame/create">
   Название игры: <input type="text" name="game_name">
   <br/>

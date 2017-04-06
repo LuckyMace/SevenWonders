@@ -5,6 +5,7 @@ import com.seven.wonders.core.Session;
 import com.seven.wonders.pojo.entity.Game;
 import com.seven.wonders.pojo.enumer.GameStatus;
 import com.seven.wonders.pojo.entity.Player;
+import com.seven.wonders.pojo.enumer.Wonder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -37,7 +38,7 @@ public class LoginController {
                           @RequestParam("player_name") String playerName) {
         Player player = new Player();
         player.setName(playerName);
-        player.setAdmin(true);
+        player.setIsAdmin(true);
         session.setCurrentPlayer(player);
 
         Game newGame = new Game();
@@ -62,7 +63,7 @@ public class LoginController {
     public String enterGame(@RequestParam("player_name") String playerName) {
         Player player = new Player();
         player.setName(playerName);
-        player.setAdmin(false);
+        player.setIsAdmin(false);
         session.setCurrentPlayer(player);
 
         //TODO: implement entering selected game (by gameId)
@@ -71,6 +72,7 @@ public class LoginController {
         ArrayList<Player> players = currentGame.getPlayers();
         players.add(player);
         currentGame.setNumber(players.size());
+
 
         session.setCurrentGameId(currentGame.getId() + "");
         return "redirect:/newgame";
