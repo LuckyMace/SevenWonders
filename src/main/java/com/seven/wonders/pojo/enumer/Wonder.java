@@ -7,23 +7,35 @@ package com.seven.wonders.pojo.enumer;
 public enum Wonder {
 
     // ENUMS
-    ALEXANDRIA ("Александрийский маяк"),
-    BABYLON ("Висячие сады в Вавилоне"),
-    COLOSSUS ("Колосс Родосский"),
-    MAUSOLEUM ("Мавзолей в Галикарнасе"),
-    PYRAMID ("Пирамиды Гизы"),
-    TEMPLE ("Храм Артемиды в Эфесе"),
-    ZEUS ("Статуя Зевса в Олимпии");
+    ALEXANDRIA ("alexandria", "Александрийский маяк"),
+    BABYLON ("babylon", "Висячие сады в Вавилоне"),
+    COLOSSUS ("colossus", "Колосс Родосский"),
+    MAUSOLEUM ("mausoleum", "Мавзолей в Галикарнасе"),
+    PYRAMID ("pyramid", "Пирамиды Гизы"),
+    TEMPLE ("temple", "Храм Артемиды в Эфесе"),
+    ZEUS ("zeus", "Статуя Зевса в Олимпии");
 
     // FIELDS
+    private String code;
+
     private String name;
 
     //CONSTUCTORS
-    Wonder(String name) {
+    Wonder(String code, String name) {
+        this.code = code;
         this.name = name;
     }
 
     // GETTERS AND SETTERS
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public String getName() {
         return name;
     }
