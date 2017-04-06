@@ -38,7 +38,6 @@
   <br/>
   <input type="submit" name="create" value="Создать игру" />
   <input type="submit" name="enter" value="Войти в игру" />
-  <input type="submit" name="leave" value="Выход" />
 </form:form>
 
 </body>
