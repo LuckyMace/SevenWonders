@@ -8,7 +8,7 @@ public enum Role {
 
     // ENUMS
     ADMIN("admin", "Админ"),
-    USER("user", "Игрок");
+    PLAYER("user", "Игрок");
 
 
     // FIELDS

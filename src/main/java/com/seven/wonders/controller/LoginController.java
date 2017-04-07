@@ -3,9 +3,9 @@ package com.seven.wonders.controller;
 import com.seven.wonders.core.Application;
 import com.seven.wonders.core.Session;
 import com.seven.wonders.pojo.entity.Game;
-import com.seven.wonders.pojo.enumer.GameStatus;
 import com.seven.wonders.pojo.entity.Player;
-import com.seven.wonders.pojo.enumer.Wonder;
+import com.seven.wonders.pojo.enumer.GameStatus;
+import com.seven.wonders.pojo.enumer.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  * Created by Pavel Ruban on 04.02.2017.
@@ -38,7 +38,7 @@ public class LoginController {
                           @RequestParam("player_name") String playerName) {
         Player player = new Player();
         player.setName(playerName);
-        player.setIsAdmin(true);
+        player.setRole(Role.ADMIN);
         session.setCurrentPlayer(player);
 
         Game newGame = new Game();
@@ -63,7 +63,7 @@ public class LoginController {
     public String enterGame(@RequestParam("player_name") String playerName) {
         Player player = new Player();
         player.setName(playerName);
-        player.setIsAdmin(false);
+        player.setRole(Role.PLAYER);
         session.setCurrentPlayer(player);
 
         //TODO: implement entering selected game (by gameId)
