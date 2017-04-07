@@ -18,12 +18,12 @@
 <table border=1 cellpadding=5>
     <tr>
         <th>Имя игрока</th>
-        <th>Создатель</th>
+        <th>Роль</th>
     </tr>
     <c:forEach items="${players}" var="player">
         <tr>
             <td>${player.name}</td>
-            <td>${player.isAdmin}</td>
+            <td>${player.role.name}</td>
         </tr>
     </c:forEach>
 </table>
