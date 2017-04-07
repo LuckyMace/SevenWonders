@@ -1,5 +1,8 @@
 package com.seven.wonders.pojo.entity;
 
+import com.seven.wonders.pojo.enumer.Role;
+import com.seven.wonders.pojo.enumer.Wonder;
+
 /**
  * Created by Pavel Ruban on 25.02.2017.
  * Entity for Player
@@ -11,18 +14,17 @@ public class Player {
 
     private String name;
 
-    private Boolean isAdmin;
+    private Role role;
 
-    private String selectedWonderName;
+    private Wonder selectedWonder;
 
     // CONSTRUCTORS
     public Player() {
     }
 
-    public Player(String name, Boolean isAdmin, String selectedWonderName) {
+    public Player(String name, Wonder selectedWonder) {
         this.name = name;
-        this.isAdmin = isAdmin;
-        this.selectedWonderName = selectedWonderName;
+        this.selectedWonder = selectedWonder;
     }
 
     // GETTERS AND SETTERS
@@ -42,19 +44,19 @@ public class Player {
         this.name = name;
     }
 
-    public void setIsAdmin(Boolean admin) {
-        isAdmin = admin;
+    public Role getRole() {
+        return role;
     }
 
-    public Boolean getIsAdmin() {
-        return isAdmin;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
-    public String getSelectedWonderName() {
-        return selectedWonderName;
+    public Wonder getSelectedWonder() {
+        return selectedWonder;
     }
 
-    public void setSelectedWonderName(String selectedWonderName) {
-        this.selectedWonderName = selectedWonderName;
+    public void setSelectedWonder(Wonder selectedWonder) {
+        this.selectedWonder = selectedWonder;
     }
 }
