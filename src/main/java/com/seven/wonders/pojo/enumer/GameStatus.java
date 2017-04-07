@@ -5,5 +5,36 @@ package com.seven.wonders.pojo.enumer;
  * Enum for Game Status
  */
 public enum GameStatus {
-    NEW, PLAYING, FINISHED
+    NEW("new", "Новая"),
+    STARTED("playing", "Началась"),
+    FINISHED("finished", "Завершена");
+
+    // FIELDS
+    private String code;
+
+    private String name;
+
+    //CONSTUCTORS
+    GameStatus(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    // GETTERS AND SETTERS
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

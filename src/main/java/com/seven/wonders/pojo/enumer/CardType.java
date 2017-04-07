@@ -5,5 +5,40 @@ package com.seven.wonders.pojo.enumer;
  * Enum for Card Type
  */
 public enum CardType {
-    CIVILIAN, COMMERCIAL, GUILD, MILITARY, RARE_RESOURCE, RESOURCE, SCIENTIFIC
+    CIVILIAN("civilian", "Гражданский"),
+    COMMERCIAL("commercial", "Коммерческий"),
+    GUILD("guild", "Гильдия"),
+    MILITARY("military", "Военный"),
+    RARE_RESOURCE("rare_resource", "Товарный"),
+    RESOURCE("resource", "Сырьевой"),
+    SCIENTIFIC("scientific", "Научный");
+
+    // FIELDS
+    private String code;
+
+    private String name;
+
+    //CONSTUCTORS
+    CardType(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    // GETTERS AND SETTERS
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

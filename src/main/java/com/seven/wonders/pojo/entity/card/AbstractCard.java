@@ -13,6 +13,8 @@ public abstract class AbstractCard {
     // FIELDS
     private Long id;
 
+    private String code;
+
     private String name;
 
     private List<Resource> cost;
@@ -44,6 +46,14 @@ public abstract class AbstractCard {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public List<Resource> getCost() {

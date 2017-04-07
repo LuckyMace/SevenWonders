@@ -9,6 +9,8 @@ public abstract class AbstractWonder {
     // FIELDS
     private Long id;
 
+    private String code;
+
     private String name;
 
     private String imagePath;
@@ -22,6 +24,14 @@ public abstract class AbstractWonder {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getName() {
