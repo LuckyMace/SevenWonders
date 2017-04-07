@@ -1,19 +1,15 @@
 package com.seven.wonders.pojo.enumer;
 
 /**
- * Created by Pavel Ruban on 06.04.2017.
- * Enum for Card Type
+ * Created by Pavel Ruban on 07.04.2017.
+ * Enum for Role
  */
-public enum CardType {
+public enum Role {
 
-    //ENUM
-    CIVILIAN("civilian", "Гражданский"),
-    COMMERCIAL("commercial", "Коммерческий"),
-    GUILD("guild", "Гильдия"),
-    MILITARY("military", "Военный"),
-    RARE_RESOURCE("rare_resource", "Товарный"),
-    RESOURCE("resource", "Сырьевой"),
-    SCIENTIFIC("scientific", "Научный");
+    // ENUMS
+    ADMIN("admin", "Админ"),
+    USER("user", "Игрок");
+
 
     // FIELDS
     private String code;
@@ -21,7 +17,7 @@ public enum CardType {
     private String name;
 
     //CONSTUCTORS
-    CardType(String code, String name) {
+    Role(String code, String name) {
         this.code = code;
         this.name = name;
     }

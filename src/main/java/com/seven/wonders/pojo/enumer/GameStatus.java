@@ -5,6 +5,8 @@ package com.seven.wonders.pojo.enumer;
  * Enum for Game Status
  */
 public enum GameStatus {
+
+    //ENUMS
     NEW("new", "Новая"),
     STARTED("playing", "Началась"),
     FINISHED("finished", "Завершена");

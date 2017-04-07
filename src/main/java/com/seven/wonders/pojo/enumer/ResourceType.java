@@ -1,7 +1,8 @@
 package com.seven.wonders.pojo.enumer;
 
 /**
- * Created by user on 04.04.2017.
+ * Created by Pavel Ruban on 04.04.2017.
+ * Enum for Resource Type
  */
 public enum ResourceType {
 
