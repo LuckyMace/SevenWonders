@@ -7,6 +7,7 @@ package com.seven.wonders.pojo.enumer;
 public enum Wonder {
 
     // ENUMS
+    RANDOM ("random", "Случайно"),
     ALEXANDRIA ("alexandria", "Александрийский маяк"),
     BABYLON ("babylon", "Висячие сады в Вавилоне"),
     COLOSSUS ("colossus", "Колосс Родосский"),
