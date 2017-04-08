@@ -28,7 +28,7 @@
       <td>${game.name}</td>
       <td>${game.players.get(0).name}</td>
       <td>${game.number}</td>
-      <td>${game.status}</td>
+      <td>${game.status.name}</td>
     </tr>
   </c:forEach>
 </table>
@@ -36,7 +36,9 @@
 <form:form method="post" action="newgame/create">
   Название игры: <input type="text" name="game_name">
   <br/>
+  <br/>
   Имя игрока: <input type="text" name="player_name">
+  <br/>
   <br/>
   <input type="submit" name="create" value="Создать игру" />
   <input type="submit" name="enter" value="Войти в игру" />

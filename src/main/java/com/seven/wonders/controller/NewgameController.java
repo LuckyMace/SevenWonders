@@ -87,6 +87,7 @@ public class NewgameController {
     public String leaveGame() {
         String currentGameId = session.getCurrentGameId();
         Game currentGame = application.getAllGames().get(currentGameId);
+        currentGame.setNumber(currentGame.getNumber() - 1);
         Player currentPlayer = session.getCurrentPlayer();
         List<Player> players = currentGame.getPlayers();
 
