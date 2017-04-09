@@ -6,6 +6,7 @@ import com.seven.wonders.pojo.entity.Game;
 import com.seven.wonders.pojo.entity.Player;
 import com.seven.wonders.pojo.enumer.GameStatus;
 import com.seven.wonders.pojo.enumer.Role;
+import com.seven.wonders.pojo.enumer.Wonder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,9 @@ public class NewgameController {
 
     @RequestMapping(value = "/newgame", method = {RequestMethod.GET, RequestMethod.POST})
     public String newgame(Model model) {
+        model.addAttribute("session", session);
         model.addAttribute("players", application.getAllGames().get(session.getCurrentGameId()).getPlayers());
+        model.addAttribute("wonders", Wonder.values());
         return "newgame";
     }
 
@@ -100,6 +103,13 @@ public class NewgameController {
         }
 
         return "redirect:/login";
+    }
+
+    @RequestMapping(value = "/newgame/save-selected-wonder", method = {RequestMethod.POST})
+    public String saveSelectedWonder(@RequestParam("selected_wonder") String selectedWonder) {
+        Player currentPlayer = session.getCurrentPlayer();
+        currentPlayer.setSelectedWonder(Wonder.valueOf(selectedWonder));
+        return "redirect:/newgame";
     }
 
 }
