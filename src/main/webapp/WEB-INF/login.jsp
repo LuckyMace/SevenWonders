@@ -34,14 +34,21 @@
 </table>
 <br/>
 <form:form method="post" action="newgame/create">
-  Название игры: <input type="text" name="game_name">
+  Название игры: <input type="text" name="game_name" required>
   <br/>
   <br/>
-  Имя игрока: <input type="text" name="player_name">
+  Имя игрока: <input type="text" name="player_name" required>
   <br/>
   <br/>
   <input type="submit" name="create" value="Создать игру" />
   <input type="submit" name="enter" value="Войти в игру" />
+  <br/>
+  <c:if test="${valPlayerName == true}">
+    <p style="color: red">Player with this name already exists in game<p>
+  </c:if>
+  <c:if test="${valMaxPlayers == true}">
+    <p style="color: red">The maximum number of players for game is 7<p>
+  </c:if>
 </form:form>
 
 </body>
