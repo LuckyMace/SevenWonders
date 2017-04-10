@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,7 @@ public class NewgameController {
     @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET, RequestMethod.POST}, params = "create")
     public String newGame(@RequestParam("game_name") String gameName,
                           @RequestParam("player_name") String playerName) {
+
         Player player = new Player();
         player.setName(playerName);
         player.setRole(Role.ADMIN);
@@ -57,6 +59,7 @@ public class NewgameController {
         newGame.setStatus(GameStatus.NEW);
         newGame.setGameType(GameType.BASE);
         newGame.setGameSide(GameSide.A);
+
 
         ArrayList<Player> players = newGame.getPlayers();
         if (players == null) {
@@ -71,7 +74,8 @@ public class NewgameController {
     }
 
     @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET, RequestMethod.POST}, params = "enter")
-    public String enterGame(@RequestParam("player_name") String playerName) {
+    public String enterGame(@RequestParam("player_name") String playerName,
+                            RedirectAttributes redirectAttributes) {
         Player player = new Player();
         player.setName(playerName);
         player.setRole(Role.PLAYER);
@@ -81,9 +85,29 @@ public class NewgameController {
         Game currentGame = application.getAllGames().get("1");
 
         ArrayList<Player> players = currentGame.getPlayers();
+
+        // Check fo player numbers in game
+        boolean isDuplicatePlayerName = false;
+        boolean isNoEmtySpace = false;
+        if (players.size() == 7){
+            redirectAttributes.addFlashAttribute("valMaxPlayers", true);
+            isNoEmtySpace = true;
+        }
+
+        // Check for player name duplicates in game
+        for (Player currentPlayer: players) {
+            if (currentPlayer.getName().equals(playerName)){
+                redirectAttributes.addFlashAttribute("valPlayerName", true);
+                isDuplicatePlayerName = true;
+                break;
+            }
+        }
+        if (isNoEmtySpace || isDuplicatePlayerName) {
+            return "redirect:/login";
+        }
+
         players.add(player);
         currentGame.setNumber(players.size());
-
 
         session.setCurrentGameId(currentGame.getId() + "");
         return "redirect:/newgame";
