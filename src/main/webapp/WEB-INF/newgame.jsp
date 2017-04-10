@@ -45,8 +45,50 @@
         </tr>
     </c:forEach>
 </table>
-<form:form method="post" action="newgame/leave">
-    <input type="submit" value="Выход"/>
-</form:form>
+
+<br>
+<select disabled name="selected_game_type">
+    <c:forEach var="gameType" items="${gameTypes}">
+        <c:choose>
+            <c:when test="${currentGame.gameType.id == gameType.id}">
+                <option selected value="${gameType}">${gameType.name}</option>
+            </c:when>
+            <c:otherwise>
+                <option value="${gameType}">${gameType.name}</option>
+            </c:otherwise>
+        </c:choose>
+    </c:forEach>
+</select>
+
+<br><br>
+<c:forEach var="gameSide" items="${gameSides}">
+    <c:choose>
+        <c:when test="${currentGame.gameSide.id == gameSide.id}">
+            <input name="gameSide" type="radio" checked disabled value="${gameSide.code}"/>${gameSide.name}
+        </c:when>
+        <c:otherwise>
+            <input name="gameSide" type="radio" disabled value="${gameSide.code}"/>${gameSide.name}
+        </c:otherwise>
+    </c:choose>
+</c:forEach>
+
+<br><br>
+<table border=0>
+    <tr>
+        <c:if test="${session.currentPlayer.role.code==\"admin\"}">
+            <td>
+                <form:form method="post" action="newgame/start">
+                    <input type="submit" value="Старт"/>
+                </form:form>
+            </td>
+        </c:if>
+        <td>
+            <form:form method="post" action="newgame/leave">
+                <input type="submit" value="Выход"/>
+            </form:form>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
