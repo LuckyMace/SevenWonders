@@ -4,9 +4,7 @@ import com.seven.wonders.core.Application;
 import com.seven.wonders.core.Session;
 import com.seven.wonders.pojo.entity.Game;
 import com.seven.wonders.pojo.entity.Player;
-import com.seven.wonders.pojo.enumer.GameStatus;
-import com.seven.wonders.pojo.enumer.Role;
-import com.seven.wonders.pojo.enumer.Wonder;
+import com.seven.wonders.pojo.enumer.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -38,6 +36,9 @@ public class NewgameController {
         model.addAttribute("session", session);
         model.addAttribute("players", application.getAllGames().get(session.getCurrentGameId()).getPlayers());
         model.addAttribute("wonders", Wonder.values());
+        model.addAttribute("gameTypes", GameType.values());
+        model.addAttribute("gameSides", GameSide.values());
+        model.addAttribute("currentGame", application.getAllGames().get(session.getCurrentGameId()));
         return "newgame";
     }
 
@@ -54,6 +55,8 @@ public class NewgameController {
         newGame.setNumber(1);
         newGame.setId(application.getAllGames().size() + 1L);
         newGame.setStatus(GameStatus.NEW);
+        newGame.setGameType(GameType.BASE);
+        newGame.setGameSide(GameSide.A);
 
         ArrayList<Player> players = newGame.getPlayers();
         if (players == null) {

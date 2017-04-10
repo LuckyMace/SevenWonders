@@ -1,25 +1,21 @@
 package com.seven.wonders.pojo.enumer;
 
 /**
- * Created by Pavel Ruban on 07.04.2017.
- * Enum for Role
+ * @author Aleksey Kurkov. Created on 10.04.2017
  */
-public enum Role {
+public enum GameSide {
 
     // ENUMS
-    ADMIN(1, "admin", "Админ"),
-    PLAYER(2, "user", "Игрок");
-
+    A(1, "a", "Сторона 'А'"),
+    B(2, "b", "Сторона 'Б'");
 
     // FIELDS
     private int id;
-
     private String code;
-
     private String name;
 
     //CONSTUCTORS
-    Role(int id, String code, String name) {
+    GameSide(int id, String code, String name) {
         this.id = id;
         this.code = code;
         this.name = name;

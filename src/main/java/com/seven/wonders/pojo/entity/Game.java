@@ -1,6 +1,8 @@
 package com.seven.wonders.pojo.entity;
 
+import com.seven.wonders.pojo.enumer.GameSide;
 import com.seven.wonders.pojo.enumer.GameStatus;
+import com.seven.wonders.pojo.enumer.GameType;
 
 import java.util.ArrayList;
 
@@ -20,6 +22,10 @@ public class Game {
     private GameStatus status;
 
     private ArrayList<Player> players;
+
+    private GameType gameType;
+
+    private GameSide gameSide;
 
     // CONSTRUCTORS
 
@@ -62,5 +68,21 @@ public class Game {
 
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
+    }
+
+    public GameType getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(GameType gameType) {
+        this.gameType = gameType;
+    }
+
+    public GameSide getGameSide() {
+        return gameSide;
+    }
+
+    public void setGameSide(GameSide gameSide) {
+        this.gameSide = gameSide;
     }
 }
