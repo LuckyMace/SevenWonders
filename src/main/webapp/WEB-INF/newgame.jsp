@@ -48,17 +48,29 @@
 
 <br>
 <select disabled name="selected_game_type">
-    <c:forEach var="game_type" items="${gameTypes}">
+    <c:forEach var="gameType" items="${gameTypes}">
         <c:choose>
-            <c:when test="${currentGame.gameType.id == game_type.id}">
-                <option selected value="${game_type}">${game_type.name}</option>
+            <c:when test="${currentGame.gameType.id == gameType.id}">
+                <option selected value="${gameType}">${gameType.name}</option>
             </c:when>
             <c:otherwise>
-                <option value="${game_type}">${game_type.name}</option>
+                <option value="${gameType}">${gameType.name}</option>
             </c:otherwise>
         </c:choose>
     </c:forEach>
 </select>
+
+<br><br>
+<c:forEach var="gameSide" items="${gameSides}">
+    <c:choose>
+        <c:when test="${currentGame.gameSide.id == gameSide.id}">
+            <input name="gameSide" type="radio" checked disabled value="${gameSide.code}"/>${gameSide.name}
+        </c:when>
+        <c:otherwise>
+            <input name="gameSide" type="radio" disabled value="${gameSide.code}"/>${gameSide.name}
+        </c:otherwise>
+    </c:choose>
+</c:forEach>
 
 <br>
 <form:form method="post" action="newgame/leave">

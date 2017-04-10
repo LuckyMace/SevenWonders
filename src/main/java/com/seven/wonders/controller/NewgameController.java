@@ -37,6 +37,7 @@ public class NewgameController {
         model.addAttribute("players", application.getAllGames().get(session.getCurrentGameId()).getPlayers());
         model.addAttribute("wonders", Wonder.values());
         model.addAttribute("gameTypes", GameType.values());
+        model.addAttribute("gameSides", GameSide.values());
         model.addAttribute("currentGame", application.getAllGames().get(session.getCurrentGameId()));
         return "newgame";
     }
