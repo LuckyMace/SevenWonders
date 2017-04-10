@@ -7,22 +7,33 @@ package com.seven.wonders.pojo.enumer;
 public enum Role {
 
     // ENUMS
-    ADMIN("admin", "Админ"),
-    PLAYER("user", "Игрок");
+    ADMIN(1, "admin", "Админ"),
+    PLAYER(2, "user", "Игрок");
 
 
     // FIELDS
+    private int id;
+
     private String code;
 
     private String name;
 
     //CONSTUCTORS
-    Role(String code, String name) {
+    Role(int id, String code, String name) {
+        this.id = id;
         this.code = code;
         this.name = name;
     }
 
     // GETTERS AND SETTERS
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getCode() {
         return code;
