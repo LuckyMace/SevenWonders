@@ -72,9 +72,23 @@
     </c:choose>
 </c:forEach>
 
-<br>
-<form:form method="post" action="newgame/leave">
-    <input type="submit" value="Выход"/>
-</form:form>
+<br><br>
+<table border=0>
+    <tr>
+        <c:if test="${session.currentPlayer.role.code==\"admin\"}">
+            <td>
+                <form:form method="post" action="newgame/start">
+                    <input type="submit" value="Старт"/>
+                </form:form>
+            </td>
+        </c:if>
+        <td>
+            <form:form method="post" action="newgame/leave">
+                <input type="submit" value="Выход"/>
+            </form:form>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
