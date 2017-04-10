@@ -45,6 +45,22 @@
         </tr>
     </c:forEach>
 </table>
+
+<br>
+<select disabled name="selected_game_type">
+    <c:forEach var="game_type" items="${gameTypes}">
+        <c:choose>
+            <c:when test="${currentGame.gameType.id == game_type.id}">
+                <option selected value="${game_type}">${game_type.name}</option>
+            </c:when>
+            <c:otherwise>
+                <option value="${game_type}">${game_type.name}</option>
+            </c:otherwise>
+        </c:choose>
+    </c:forEach>
+</select>
+
+<br>
 <form:form method="post" action="newgame/leave">
     <input type="submit" value="Выход"/>
 </form:form>
