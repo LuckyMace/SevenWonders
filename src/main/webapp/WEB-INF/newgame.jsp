@@ -29,12 +29,16 @@
                 <c:choose>
                     <c:when test="${player.name==session.currentPlayer.name}">
                         <form:form method="post" action="newgame/save-selected-wonder">
-                            <select name="selected_wonder">
+                            <select name="selected_wonder" onchange='this.form.submit()'>
                                 <c:forEach var="wonder" items="${wonders}">
-                                    <option value="${wonder}">${wonder.name}</option>
+                                    <c:if test="${player.selectedWonder.id==wonder.id}">
+                                        <option value="${wonder}" selected>${wonder.name}</option>
+                                    </c:if>
+                                    <c:if test="${player.selectedWonder.id!=wonder.id}">
+                                        <option value="${wonder}">${wonder.name}</option>
+                                    </c:if>
                                 </c:forEach>
                             </select>
-                            <input type="submit" value="Сохранить"/>
                         </form:form>
                     </c:when>
                     <c:otherwise>
