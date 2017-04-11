@@ -81,8 +81,7 @@ public class NewgameController {
         player.setRole(Role.PLAYER);
         session.setCurrentPlayer(player);
 
-        //TODO: implement entering selected game (by gameId)
-        Game currentGame = application.getAllGames().get("1");
+        Game currentGame = application.getAllGames().get(session.getSelectedGameId());
 
         ArrayList<Player> players = currentGame.getPlayers();
 
