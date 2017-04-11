@@ -82,7 +82,7 @@
         <c:if test="${session.currentPlayer.role.code==\"admin\"}">
             <td>
                 <form:form method="post" action="newgame/start">
-                    <input type="submit" value="Старт"/>
+                    <input type="submit" value="Начать"/>
                 </form:form>
             </td>
         </c:if>

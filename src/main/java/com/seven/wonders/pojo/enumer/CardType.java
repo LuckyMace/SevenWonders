@@ -7,6 +7,7 @@ package com.seven.wonders.pojo.enumer;
 public enum CardType {
 
     //ENUM
+    BACK(0, "back", "Обратная сторона"),
     CIVILIAN(1, "civilian", "Гражданский"),
     COMMERCIAL(2, "commercial", "Коммерческий"),
     GUILD(3, "guild", "Гильдия"),

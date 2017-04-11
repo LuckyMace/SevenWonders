@@ -1,6 +1,7 @@
 package com.seven.wonders.pojo.entity.card;
 
 import com.seven.wonders.pojo.entity.Resource;
+import com.seven.wonders.pojo.enumer.Card;
 
 import java.util.List;
 
@@ -25,9 +26,11 @@ public abstract class AbstractCard {
 
     private String imagePath;
 
-    private List<AbstractCard> freeCards;
+    private String smallImagePath;
 
-    private List<AbstractCard> parentCards;
+    private List<Card> freeCards;
+
+    private List<Card> parentCards;
 
     //CONSTRUCTORS
 
@@ -88,19 +91,27 @@ public abstract class AbstractCard {
         this.imagePath = imagePath;
     }
 
-    public List<AbstractCard> getFreeCards() {
+    public String getSmallImagePath() {
+        return smallImagePath;
+    }
+
+    public void setSmallImagePath(String smallImagePath) {
+        this.smallImagePath = smallImagePath;
+    }
+
+    public List<Card> getFreeCards() {
         return freeCards;
     }
 
-    public void setFreeCards(List<AbstractCard> freeCards) {
+    public void setFreeCards(List<Card> freeCards) {
         this.freeCards = freeCards;
     }
 
-    public List<AbstractCard> getParentCards() {
+    public List<Card> getParentCards() {
         return parentCards;
     }
 
-    public void setParentCards(List<AbstractCard> parentCards) {
+    public void setParentCards(List<Card> parentCards) {
         this.parentCards = parentCards;
     }
 }

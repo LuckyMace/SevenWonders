@@ -14,6 +14,10 @@ public class Resource {
     private int value;
 
     //CONSTRUCTORS
+    public Resource(ResourceType type, int value) {
+        this.type = type;
+        this.value = value;
+    }
 
     //GETTERS AND SETTERS
     public ResourceType getType() {
