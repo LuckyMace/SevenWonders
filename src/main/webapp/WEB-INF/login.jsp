@@ -49,7 +49,7 @@
 
 <br/>
 <form:form method="post" action="newgame/create">
-    Название игры: <input type="text" name="game_name" required>
+    Название игры: <input type="text" name="game_name">
     <br/>
     <br/>
     Имя игрока: <input type="text" name="player_name" required>
@@ -61,6 +61,10 @@
 
     <c:if test="${valSelectedGame == true}">
         <p style="color: red">Game is not selected. Please, select the game! </p>
+    </c:if>
+
+    <c:if test="${valEmptyGameName == true}">
+        <p style="color: red">Game name is empty. Please, write the game name! </p>
     </c:if>
 
     <c:if test="${valPlayerName == true}">
