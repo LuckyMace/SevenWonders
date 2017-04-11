@@ -81,6 +81,12 @@ public class NewgameController {
         player.setRole(Role.PLAYER);
         session.setCurrentPlayer(player);
 
+        //Check if user has selected game
+        if (session.getSelectedGameId() == null) {
+            redirectAttributes.addFlashAttribute("valSelectedGame", true);
+            return "redirect:/login";
+        }
+
         Game currentGame = application.getAllGames().get(session.getSelectedGameId());
 
         ArrayList<Player> players = currentGame.getPlayers();

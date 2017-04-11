@@ -33,10 +33,12 @@
                 <td>${game.status.name}</td>
                 <td>
                     <c:if test="${game.id==session.selectedGameId}">
-                        <input name="selectedGame" type="radio" value="${game.id}" onclick="this.form.submit()" checked/>
+                        <input name="selectedGame" type="radio" value="${game.id}" onclick="this.form.submit()" required
+                               checked/>
                     </c:if>
                     <c:if test="${game.id!=session.selectedGameId}">
-                        <input name="selectedGame" type="radio" value="${game.id}" onclick="this.form.submit()"/>
+                        <input name="selectedGame" type="radio" value="${game.id}" onclick="this.form.submit()"
+                               required/>
                     </c:if>
                 </td>
             </tr>
@@ -47,24 +49,28 @@
 
 <br/>
 <form:form method="post" action="newgame/create">
-Название игры: <input type="text" name="game_name" required>
-<br/>
-<br/>
-Имя игрока: <input type="text" name="player_name" required>
-<br/>
-<br/>
-<input type="submit" name="create" value="Создать игру"/>
-<input type="submit" name="enter" value="Войти в игру"/>
-<br/>
-<c:if test="${valPlayerName == true}">
-<p style="color: red">Player with this name already exists in game
-<p>
+    Название игры: <input type="text" name="game_name" required>
+    <br/>
+    <br/>
+    Имя игрока: <input type="text" name="player_name" required>
+    <br/>
+    <br/>
+    <input type="submit" name="create" value="Создать игру"/>
+    <input type="submit" name="enter" value="Войти в игру"/>
+    <br/>
+
+    <c:if test="${valSelectedGame == true}">
+        <p style="color: red">Game is not selected. Please, select the game! </p>
     </c:if>
+
+    <c:if test="${valPlayerName == true}">
+        <p style="color: red">Player with this name already exists in game </p>
+    </c:if>
+
     <c:if test="${valMaxPlayers == true}">
-<p style="color: red">The maximum number of players for game is 7
-<p>
+        <p style="color: red">The maximum number of players for game is 7 </p>
     </c:if>
-    </form:form>
+</form:form>
 
 </body>
 </html>
