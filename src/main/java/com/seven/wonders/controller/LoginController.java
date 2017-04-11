@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by Pavel Ruban on 04.02.2017.
@@ -29,7 +30,14 @@ public class LoginController {
     @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
     public String login(Model model) {
         model.addAttribute("allGames", application.getAllGames().values());
+        model.addAttribute("session", session);
         return "login";
+    }
+
+    @RequestMapping(value = "/login/save-selected-game", method = {RequestMethod.POST})
+    public String saveSelectedGame(@RequestParam("selectedGame") String selectedGame) {
+        session.setSelectedGameId(selectedGame);
+        return "redirect:/login";
     }
 
     public String getPort() {

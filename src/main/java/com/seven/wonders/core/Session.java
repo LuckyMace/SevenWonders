@@ -10,12 +10,14 @@ import org.springframework.stereotype.Component;
  * Controller for Session
  */
 
-@Scope(value = "session",  proxyMode = ScopedProxyMode.TARGET_CLASS)
+@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Component
 public class Session {
     private String currentGameId;
 
     private Player currentPlayer;
+
+    private String selectedGameId;
 
     public String getCurrentGameId() {
         return currentGameId;
@@ -31,5 +33,13 @@ public class Session {
 
     public void setCurrentPlayer(Player currentPlayer) {
         this.currentPlayer = currentPlayer;
+    }
+
+    public String getSelectedGameId() {
+        return selectedGameId;
+    }
+
+    public void setSelectedGameId(String selectedGameId) {
+        this.selectedGameId = selectedGameId;
     }
 }
