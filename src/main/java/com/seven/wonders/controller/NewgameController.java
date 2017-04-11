@@ -45,7 +45,14 @@ public class NewgameController {
 
     @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET, RequestMethod.POST}, params = "create")
     public String newGame(@RequestParam("game_name") String gameName,
-                          @RequestParam("player_name") String playerName) {
+                          @RequestParam("player_name") String playerName,
+                          RedirectAttributes redirectAttributes) {
+
+        //Check if game name is empty
+        if (gameName == null || "".equals(gameName)) {
+            redirectAttributes.addFlashAttribute("valEmptyGameName", true);
+            return "redirect:/login";
+        }
 
         Player player = new Player();
         player.setName(playerName);
@@ -81,22 +88,27 @@ public class NewgameController {
         player.setRole(Role.PLAYER);
         session.setCurrentPlayer(player);
 
-        //TODO: implement entering selected game (by gameId)
-        Game currentGame = application.getAllGames().get("1");
+        //Check if user has selected game
+        if (session.getSelectedGameId() == null) {
+            redirectAttributes.addFlashAttribute("valSelectedGame", true);
+            return "redirect:/login";
+        }
+
+        Game currentGame = application.getAllGames().get(session.getSelectedGameId());
 
         ArrayList<Player> players = currentGame.getPlayers();
 
         // Check fo player numbers in game
         boolean isDuplicatePlayerName = false;
         boolean isNoEmtySpace = false;
-        if (players.size() == 7){
+        if (players.size() == 7) {
             redirectAttributes.addFlashAttribute("valMaxPlayers", true);
             isNoEmtySpace = true;
         }
 
         // Check for player name duplicates in game
-        for (Player currentPlayer: players) {
-            if (currentPlayer.getName().equals(playerName)){
+        for (Player currentPlayer : players) {
+            if (currentPlayer.getName().equals(playerName)) {
                 redirectAttributes.addFlashAttribute("valPlayerName", true);
                 isDuplicatePlayerName = true;
                 break;
