@@ -7,14 +7,14 @@ package com.seven.wonders.pojo.enumer;
 public enum Wonder {
 
     // ENUMS
-    RANDOM (0, "random", "Случайно", ""),
-    ALEXANDRIA (1, "alexandria", "Александрийский маяк", ""),
-    BABYLON (2, "babylon", "Висячие сады в Вавилоне", ""),
-    COLOSSUS (3, "colossus", "Колосс Родосский", ""),
-    MAUSOLEUM (4, "mausoleum", "Мавзолей в Галикарнасе", ""),
-    PYRAMID (5, "pyramid", "Пирамиды Гизы", ""),
-    TEMPLE (6, "temple", "Храм Артемиды в Эфесе", ""),
-    ZEUS (7, "zeus", "Статуя Зевса в Олимпии","");
+    RANDOM (0, "random", "Случайно", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\random.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\random.jpg"),
+    ALEXANDRIA (1, "alexandria", "Александрийский маяк", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\alexandria_a.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\alexandria_b.jpg"),
+    BABYLON (2, "babylon", "Висячие сады в Вавилоне", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\babylon_a.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\babylon_b.jpg"),
+    COLOSSUS (3, "colossus", "Колосс Родосский", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\colossus_a.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\colossus_b.jpg"),
+    MAUSOLEUM (4, "mausoleum", "Мавзолей в Галикарнасе", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\mausoleum_a.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\mausoleum_b.jpg"),
+    PYRAMID (5, "pyramid", "Пирамиды Гизы", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\pyramid_a.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\pyramid_b.jpg"),
+    TEMPLE (6, "temple", "Храм Артемиды в Эфесе", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\temple_a.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\temple_b.jpg"),
+    ZEUS (7, "zeus", "Статуя Зевса в Олимпии","src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\zeus_a.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\wonders\\zeus_b.jpg");
 
     // FIELDS
     private int id;
@@ -23,14 +23,17 @@ public enum Wonder {
 
     private String name;
 
-    private String imagePath;
+    private String imagePathA;
+
+    private String imagePathB;
 
     //CONSTUCTORS
-    Wonder(int id, String code, String name, String imagePath) {
+    Wonder(int id, String code, String name, String imagePathA, String imagePathB) {
         this.id = id;
         this.code = code;
         this.name = name;
-        this.imagePath = imagePath;
+        this.imagePathA = imagePathA;
+        this.imagePathB = imagePathB;
     }
 
     // GETTERS AND SETTERS
@@ -60,11 +63,19 @@ public enum Wonder {
         this.name = name;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public String getImagePathA() {
+        return imagePathA;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setImagePathA(String imagePathA) {
+        this.imagePathA = imagePathA;
+    }
+
+    public String getImagePathB() {
+        return imagePathB;
+    }
+
+    public void setImagePathB(String imagePathB) {
+        this.imagePathB = imagePathB;
     }
 }

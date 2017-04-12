@@ -23,6 +23,8 @@ public class Game {
 
     private ArrayList<Player> players;
 
+
+
     private GameType gameType;
 
     private GameSide gameSide;

@@ -1,5 +1,6 @@
 package com.seven.wonders.pojo.entity;
 
+import com.seven.wonders.pojo.entity.wonder.AbstractWonder;
 import com.seven.wonders.pojo.enumer.Role;
 import com.seven.wonders.pojo.enumer.Wonder;
 
@@ -15,6 +16,8 @@ public class Player {
     private String name;
 
     private Role role;
+
+    private AbstractWonder wonder;
 
     private Wonder selectedWonder;
 
@@ -50,6 +53,14 @@ public class Player {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public AbstractWonder getWonder() {
+        return wonder;
+    }
+
+    public void setWonder(AbstractWonder wonder) {
+        this.wonder = wonder;
     }
 
     public Wonder getSelectedWonder() {

@@ -13,7 +13,19 @@ public abstract class AbstractWonder {
 
     private String name;
 
-    private String imagePath;
+    private int allWinPoints;
+
+    private int conflictWinPoints;
+
+    private int conflictPower;
+
+    private int freeBuildByEpoch;
+
+    private int freeBuildEnd;
+
+    private String imagePathA;
+
+    private String imagePathB;
 
     //CONSTRUCTORS
 
@@ -42,11 +54,60 @@ public abstract class AbstractWonder {
         this.name = name;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public int getAllWinPoints() {
+        return allWinPoints;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setAllWinPoints(int allWinPoints) {
+        this.allWinPoints = allWinPoints;
     }
+
+    public int getConflictWinPoints() {
+        return conflictWinPoints;
+    }
+
+    public void setConflictWinPoints(int conflictWinPoints) {
+        this.conflictWinPoints = conflictWinPoints;
+    }
+
+    public int getConflictPower() {
+        return conflictPower;
+    }
+
+    public void setConflictPower(int conflictPower) {
+        this.conflictPower = conflictPower;
+    }
+
+    public int getFreeBuildByEpoch() {
+        return freeBuildByEpoch;
+    }
+
+    public void setFreeBuildByEpoch(int freeBuildByEpoch) {
+        this.freeBuildByEpoch = freeBuildByEpoch;
+    }
+
+    public int getFreeBuildEnd() {
+        return freeBuildEnd;
+    }
+
+    public void setFreeBuildEnd(int freeBuildEnd) {
+        this.freeBuildEnd = freeBuildEnd;
+    }
+
+    public String getImagePathA() {
+        return imagePathA;
+    }
+
+    public void setImagePathA(String imagePathA) {
+        this.imagePathA = imagePathA;
+    }
+
+    public String getImagePathB() {
+        return imagePathB;
+    }
+
+    public void setImagePathB(String imagePathB) {
+        this.imagePathB = imagePathB;
+    }
+
 }

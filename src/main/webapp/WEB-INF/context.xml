@@ -1,6 +1,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
@@ -23,4 +24,43 @@
             <value>.jsp</value>
         </property>
     </bean>
+
+    <!--<bean id="resource" class="com.seven.wonders.pojo.entity.Resource">-->
+        <!--<constructor-arg type="0" value="0"/>-->
+        <!--<constructor-arg index="1" value="1-01"/>-->
+        <!--<constructor-arg index="2" value="Specified Client does not exist."/>-->
+    <!--</bean>-->
+
+    <!--<util:map id="credentialsAPIErrorMap" map-class="java.util.HashMap">-->
+        <!--<entry key="apiError909" value-ref="apiError909"/>-->
+        <!--<entry key="apiError101" value-ref="apiError101"/>-->
+        <!--<entry key="apiError102" value-ref="apiError102"/>-->
+        <!--<entry key="apiError103" value-ref="apiError103"/>-->
+        <!--<entry key="apiError104" value-ref="apiError104"/>-->
+        <!--<entry key="apiError105" value-ref="apiError105"/>-->
+        <!--<entry key="apiError106" value-ref="apiError106"/>-->
+        <!--<entry key="apiError107" value-ref="apiError107"/>-->
+        <!--<entry key="apiError108" value-ref="apiError108"/>-->
+        <!--<entry key="apiError202" value-ref="apiError202"/>-->
+        <!--<entry key="apiError301" value-ref="apiError301"/>-->
+        <!--<entry key="apiError302" value-ref="apiError302"/>-->
+        <!--<entry key="apiError303" value-ref="apiError303"/>-->
+        <!--<entry key="apiError305" value-ref="apiError305"/>-->
+        <!--<entry key="apiError201" value-ref="apiError201"/>-->
+        <!--<entry key="apiError204" value-ref="apiError204"/>-->
+        <!--<entry key="apiError203" value-ref="apiError203"/>-->
+        <!--<entry key="apiError205" value-ref="apiError205"/>-->
+        <!--<entry key="apiError206" value-ref="apiError206"/>-->
+        <!--<entry key="apiError207" value-ref="apiError207"/>-->
+        <!--<entry key="apiError208" value-ref="apiError208"/>-->
+        <!--<entry key="apiError209" value-ref="apiError209"/>-->
+        <!--<entry key="apiError210" value-ref="apiError210"/>-->
+        <!--<entry key="apiError222" value-ref="apiError222"/>-->
+        <!--<entry key="apiErrorX01" value-ref="apiErrorX01"/>-->
+        <!--<entry key="apiErrorX04" value-ref="apiErrorX04"/>-->
+        <!--<entry key="apiErrorX05" value-ref="apiErrorX05"/>-->
+        <!--<entry key="apiErrorX06" value-ref="apiErrorX06"/>-->
+        <!--<entry key="apiErrorA05" value-ref="apiErrorA05"/>-->
+    <!--</util:map>-->
+
 </beans>
