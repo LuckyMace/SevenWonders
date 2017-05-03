@@ -116,6 +116,10 @@ public enum Card {
 
     CARD_2_1 (201, "2_1", "2 Эпоха", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
             , 3, 2, CardType.BACK, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_1.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_1.jpg", null, null),
+    CARD_2_2 (202, "2_2", "Кирпичный склад", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 1), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
+            , 3, 2, CardType.RESOURCE, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_2.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_2.jpg", Arrays.asList(CARD_1_1), null),
+    CARD_2_3 (203, "2_3", "Кирпичный склад", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 1), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
+            , 4, 2, CardType.RESOURCE, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_3.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_3.jpg", Arrays.asList(CARD_1_1), null),
 
 
 
