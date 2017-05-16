@@ -190,6 +190,11 @@ public enum Card {
             , 3, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_37.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_37.jpg", null, Arrays.asList(CARD_1_47, CARD_1_48)),
     CARD_2_38 (238, "2_38", "Конюшни", Arrays.asList(new Resource(ResourceType.CLAY, 1), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 1))
             , 5, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_38.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_38.jpg", null, Arrays.asList(CARD_1_47, CARD_1_48)),
+    CARD_2_39 (239, "2_39", "Стены", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 3), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
+            , 3, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_39.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_39.jpg", null, null),
+    CARD_2_40 (240, "2_40", "Стены", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 3), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
+            , 7, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_40.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_40.jpg", null, null),
+
 
     CARD_3_1 (301, "3_1", "3 Эпоха", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
             , 3, 3, CardType.BACK, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_1.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_1.jpg", null, null),
