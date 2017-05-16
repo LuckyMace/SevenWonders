@@ -194,6 +194,11 @@ public enum Card {
             , 3, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_39.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_39.jpg", null, null),
     CARD_2_40 (240, "2_40", "Стены", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 3), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
             , 7, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_40.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_40.jpg", null, null),
+    CARD_2_41 (241, "2_41", "Стрельбище", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 2))
+            , 3, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_41.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_41.jpg", null, Arrays.asList(CARD_1_45, CARD_1_46)),
+    CARD_2_42 (242, "2_42", "Стрельбище", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 2))
+            , 6, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_42.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_42.jpg", null, Arrays.asList(CARD_1_45, CARD_1_46)),
+
 
 
     CARD_3_1 (301, "3_1", "3 Эпоха", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
