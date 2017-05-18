@@ -198,6 +198,10 @@ public enum Card {
             , 3, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_41.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_41.jpg", null, Arrays.asList(CARD_1_45, CARD_1_46)),
     CARD_2_42 (242, "2_42", "Стрельбище", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 2))
             , 6, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_42.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_42.jpg", null, Arrays.asList(CARD_1_45, CARD_1_46)),
+    CARD_2_43 (243, "2_43", "Школа", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 1), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 1))
+            , 3, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_43.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_43.jpg", null, null),
+    CARD_2_44 (244, "2_44", "Школа", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 1), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 1))
+            , 7, 2, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\2_44.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\2_44.jpg", null, null),
 
 
 
