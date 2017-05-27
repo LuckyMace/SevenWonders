@@ -227,11 +227,11 @@ public enum Card {
     CARD_3_5 (305, "3_5", "Сенат", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 1), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 2))
             , 5, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_5.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_5.jpg", null, Arrays.asList(CARD_2_49, CARD_2_50)),
     CARD_3_6 (306, "3_6", "Ратуша", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 2), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
-            , 3, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_5.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_5.jpg", null, Arrays.asList(CARD_2_49, CARD_2_50)),
+            , 3, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_6.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_6.jpg", null, null),
     CARD_3_7 (307, "3_7", "Ратуша", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 2), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
-            , 5, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_5.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_5.jpg", null, Arrays.asList(CARD_2_49, CARD_2_50)),
+            , 5, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_7.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_7.jpg", null, null),
     CARD_3_8 (308, "3_8", "Ратуша", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 2), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
-            , 6, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_5.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_5.jpg", null, Arrays.asList(CARD_2_49, CARD_2_50)),
+            , 6, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_8.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_8.jpg", null, null),
 
     ;
 
