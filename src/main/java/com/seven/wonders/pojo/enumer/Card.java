@@ -232,6 +232,10 @@ public enum Card {
             , 5, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_7.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_7.jpg", null, null),
     CARD_3_8 (308, "3_8", "Ратуша", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 2), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
             , 6, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_8.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_8.jpg", null, null),
+    CARD_3_9 (309, "3_9", "Сады", Arrays.asList(new Resource(ResourceType.CLAY, 2), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 1))
+            , 3, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_9.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_9.jpg", null, Arrays.asList(CARD_2_16, CARD_2_17)),
+    CARD_3_10 (310, "3_10", "Сады", Arrays.asList(new Resource(ResourceType.CLAY, 2), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 1))
+            , 4, 3, CardType.CIVILIAN, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_10.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_10.jpg", null, Arrays.asList(CARD_2_16, CARD_2_17)),
 
     ;
 
