@@ -1,6 +1,7 @@
 package com.seven.wonders.controller;
 
 import com.seven.wonders.core.Application;
+import com.seven.wonders.core.GameSocketHandler;
 import com.seven.wonders.core.Session;
 import com.seven.wonders.pojo.entity.Game;
 import com.seven.wonders.pojo.entity.Player;
@@ -31,6 +32,9 @@ public class NewgameController {
 
     @Autowired
     private Session session;
+
+    @Autowired
+    private GameSocketHandler gameSocketHandler;
 
     @RequestMapping(value = "/newgame", method = {RequestMethod.GET, RequestMethod.POST})
     public String newgame(Model model) {
@@ -82,7 +86,7 @@ public class NewgameController {
 
     @RequestMapping(value = "/newgame/create", method = {RequestMethod.GET, RequestMethod.POST}, params = "enter")
     public String enterGame(@RequestParam("player_name") String playerName,
-                            RedirectAttributes redirectAttributes) {
+                            RedirectAttributes redirectAttributes) throws Exception {
         Player player = new Player();
         player.setName(playerName);
         player.setRole(Role.PLAYER);
@@ -122,11 +126,12 @@ public class NewgameController {
         currentGame.setNumber(players.size());
 
         session.setCurrentGameId(currentGame.getId() + "");
+        gameSocketHandler.updatePlayers();
         return "redirect:/newgame";
     }
 
     @RequestMapping(value = "/newgame/leave", method = {RequestMethod.GET, RequestMethod.POST})
-    public String leaveGame() {
+    public String leaveGame() throws Exception {
         String currentGameId = session.getCurrentGameId();
         Game currentGame = application.getAllGames().get(currentGameId);
         currentGame.setNumber(currentGame.getNumber() - 1);
@@ -140,7 +145,7 @@ public class NewgameController {
         if (players.size() == 0) {
             application.getAllGames().remove(currentGameId);
         }
-
+        gameSocketHandler.updatePlayers();
         return "redirect:/login";
     }
 

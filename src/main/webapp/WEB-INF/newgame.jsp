@@ -13,16 +13,22 @@
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>7 Wonders</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="static/js/gameCreate.js"></script>
 </head>
 <body>
-<table border=1 cellpadding=5>
+<table border=1 cellpadding=5 id="playerTable">
     <tr>
         <th>Имя игрока</th>
         <th>Роль</th>
         <th>Город</th>
     </tr>
     <c:forEach items="${players}" var="player">
-        <tr>
+        <tr >
             <td>${player.name}</td>
             <td>${player.role.name}</td>
             <td>
@@ -93,6 +99,12 @@
         </td>
     </tr>
 </table>
+
+<script>
+    $( document ).ready(function() {
+        connect();
+    });
+</script>
 
 </body>
 </html>
