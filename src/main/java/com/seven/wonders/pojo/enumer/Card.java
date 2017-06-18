@@ -262,6 +262,9 @@ public enum Card {
             , 3, 3, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_22.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_22.jpg", null, Arrays.asList(CARD_2_39, CARD_2_40)),
     CARD_3_23 (323, "3_23", "Укрепления", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 3), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 1), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
             , 7, 3, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_23.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_23.jpg", null, Arrays.asList(CARD_2_39, CARD_2_40)),
+    CARD_3_24 (324, "3_24", "Арсенал", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 1), new Resource(ResourceType.WOOD, 2))
+            , 3, 3, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_24.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_24.jpg", null, null),
+
 
 
     ;
