@@ -272,6 +272,8 @@ public enum Card {
             , 4, 3, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_27.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_27.jpg", null, Arrays.asList(CARD_2_34, CARD_2_35, CARD_2_36)),
     CARD_3_28 (328, "3_28", "Амфитеатр", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 3), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
             , 5, 3, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_28.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_28.jpg", null, Arrays.asList(CARD_2_34, CARD_2_35, CARD_2_36)),
+    CARD_3_29 (329, "3_29", "Амфитеатр", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 1), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 3), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
+            , 6, 3, CardType.MILITARY, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_29.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_29.jpg", null, Arrays.asList(CARD_2_34, CARD_2_35, CARD_2_36)),
 
 
     ;
