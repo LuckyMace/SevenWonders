@@ -284,6 +284,8 @@ public enum Card {
             , 7, 3, CardType.SCIENTIFIC, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_33.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_33.jpg", null, Arrays.asList(CARD_2_43, CARD_2_44)),
     CARD_3_34 (334, "3_34", "Научный центр", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 1), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 1), new Resource(ResourceType.WOOD, 1))
             , 3, 3, CardType.SCIENTIFIC, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_34.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_34.jpg", null, Arrays.asList(CARD_2_43, CARD_2_44)),
+    CARD_3_35 (335, "3_35", "Научный центр", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 1), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 1), new Resource(ResourceType.WOOD, 1))
+            , 5, 3, CardType.SCIENTIFIC, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_35.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_35.jpg", null, Arrays.asList(CARD_2_43, CARD_2_44)),
 
 
     ;
