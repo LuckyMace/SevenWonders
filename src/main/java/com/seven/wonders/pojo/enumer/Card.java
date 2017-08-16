@@ -297,7 +297,11 @@ public enum Card {
     CARD_3_40 (340, "3_40", "Обсерватория", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 2), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 1), new Resource(ResourceType.WOOD, 0))
             , 3, 3, CardType.SCIENTIFIC, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_40.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_40.jpg", null, Arrays.asList(CARD_2_45, CARD_2_46)),
     CARD_3_41 (341, "3_41", "Обсерватория", Arrays.asList(new Resource(ResourceType.CLAY, 0), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 2), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 1), new Resource(ResourceType.WOOD, 0))
-            , 7, 3, CardType.SCIENTIFIC, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_401.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_41.jpg", null, Arrays.asList(CARD_2_45, CARD_2_46)),
+            , 7, 3, CardType.SCIENTIFIC, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\3_41.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\3_41.jpg", null, Arrays.asList(CARD_2_45, CARD_2_46)),
+
+
+    CARD_4_1 (401, "4_1", "Гильдия философов", Arrays.asList(new Resource(ResourceType.CLAY, 3), new Resource(ResourceType.GLASS, 0), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 1), new Resource(ResourceType.STONE, 0), new Resource(ResourceType.TEXTILE, 1), new Resource(ResourceType.WOOD, 0))
+            , 3, 4, CardType.GUILD, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\4_1.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\4_1.jpg", null, null),
 
 
     ;
