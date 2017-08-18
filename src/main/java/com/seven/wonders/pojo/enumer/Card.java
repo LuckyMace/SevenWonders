@@ -304,6 +304,8 @@ public enum Card {
             , 3, 4, CardType.GUILD, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\4_1.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\4_1.jpg", null, null),
     CARD_4_2 (402, "4_2", "Гильдия философов", Arrays.asList(new Resource(ResourceType.CLAY, 2), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 2), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
             , 3, 4, CardType.GUILD, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\4_2.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\4_2.jpg", null, null),
+    CARD_4_3 (403, "4_3", "Гильдия философов", Arrays.asList(new Resource(ResourceType.CLAY, 2), new Resource(ResourceType.GLASS, 1), new Resource(ResourceType.GOLD, 0), new Resource(ResourceType.ORE, 0), new Resource(ResourceType.PAPIRUS, 0), new Resource(ResourceType.STONE, 2), new Resource(ResourceType.TEXTILE, 0), new Resource(ResourceType.WOOD, 0))
+            , 3, 4, CardType.GUILD, "src\\main\\webapp\\WEB-INF\\static\\img\\cards\\4_3.jpg", "src\\main\\webapp\\WEB-INF\\static\\img\\small_cards\\4_3.jpg", null, null),
 
 
     ;
